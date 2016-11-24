@@ -3,7 +3,7 @@
     "description": "Yii2 extension widget",
     "type" : "yii2-extension",
     "license": "GPL2.0",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "suncky",

@@ -18,7 +18,7 @@ config
         //'baseUrl' => 'http://.../',
         //'keyId'     => '...',
         //'keySecret' => '...',
-        //'bucket'    => 'xst-upload',
+        //'bucket'    => 'xxx-upload',
         //'endPoint'  => isset($_SERVER['SERVER']) && $_SERVER['SERVER'] == 'ALIYUN' ? 'http://oss-cn-hangzhou-internal.aliyuncs.com' : 'http://oss-cn-hangzhou.aliyuncs.com',
     ],
     'rules' => [
@@ -41,7 +41,7 @@ config
         // 'baseDir' => 'uploaded',
         // 'keyId' => '...',
         // 'keySecret' => '...',
-        // 'bucket' => 'xst-upload',
+        // 'bucket' => 'xxx-upload',
         // 'endPoint' => isset($_SERVER['SERVER']) && $_SERVER['SERVER'] == 'ALIYUN' ? 'http://oss-cn-hangzhou-internal.aliyuncs.com' : 'http://oss-cn-hangzhou.aliyuncs.com',
     ],
 ],
