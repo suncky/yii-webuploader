@@ -1,32 +1,23 @@
 <?php
-/**
- * 邢帅教育
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader\components;
 
 use yii\base\Object;
 
 /**
  * Class BaseImage
- * @package sjy\upload\components
- * @author Choate <choate.yao@gmail.com>
+ * @package suncky\yii\widgets\webuploader\components
  */
 abstract class BaseImage extends Object
 {
     /**
      * @var BaseStorage
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_storage;
 
     /**
      * @var File
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_file;
     
@@ -35,7 +26,6 @@ abstract class BaseImage extends Object
      * 
      * @var
      * 
-     * @author Hollis_Ho
      */
     private $_img_url;
     
@@ -44,7 +34,6 @@ abstract class BaseImage extends Object
      * 
      * @var
      * 
-     * @author Hollis_Ho
      */
     private $_crop = 0;
     
@@ -53,7 +42,6 @@ abstract class BaseImage extends Object
      * 
      * @var
      * 
-     * @author Hollis_Ho
      */
     private $_crop_x = 0;
     
@@ -62,7 +50,6 @@ abstract class BaseImage extends Object
      *
      * @var
      *
-     * @author Hollis_Ho
      */
     private $_crop_y = 0;
 
@@ -71,7 +58,6 @@ abstract class BaseImage extends Object
      *
      * @var string
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_driver = 'gd';
 
@@ -150,7 +136,6 @@ abstract class BaseImage extends Object
      * 质量转换
      *
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_quality;
 
@@ -159,21 +144,18 @@ abstract class BaseImage extends Object
      *
      * @var bool
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_absoluteQuality = false;
 
     /**
      * 格式转换
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_format;
     
     /**
      * return int
      * 
-     * @author Hollis_Ho
      */
     public function getCrop() {
         return $this->_crop;
@@ -182,7 +164,6 @@ abstract class BaseImage extends Object
     /**
      * @param $crop
      * 
-     * @author Hollis_Ho
      */
     public function setCrop($crop) {
         $this->_crop = $crop;
@@ -191,7 +172,6 @@ abstract class BaseImage extends Object
     /**
      * @return int
      * 
-     * @author Hollis_Ho
      */
     public function getCropX() {
         return $this->_crop_x;
@@ -200,7 +180,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $crop_x
      * 
-     * @author Hollis_Ho
      */
     public function setCropX($crop_x) {
         $this->_crop_x = $crop_x;
@@ -209,7 +188,6 @@ abstract class BaseImage extends Object
     /**
      * @return int
      * 
-     * @author Hollis_Ho
      */
     public function getCropY() {
         return $this->_crop_y;
@@ -218,7 +196,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $crop_y
      * 
-     * @author Hollis_Ho
      */
     public function setCropY($crop_y) {
         $this->_crop_y = $crop_y;
@@ -226,7 +203,6 @@ abstract class BaseImage extends Object
     
     /**
      * 获取图片来源（图片绝对路径）
-     * @author Hollis_Ho
      * @return url
      */
     public function getImgUrl() {
@@ -235,7 +211,6 @@ abstract class BaseImage extends Object
     
     /**
      * 设置图片来源（图片绝对路径）
-     * @author Hollis_Ho
      * @param $img_url
      */
     public function setImgUrl($img_url) {
@@ -244,7 +219,6 @@ abstract class BaseImage extends Object
 
     /**
      * File
-     * @author Choate <choate.yao@gmail.com>
      * @return File
      */
     public function getFile() {
@@ -254,7 +228,6 @@ abstract class BaseImage extends Object
     /**
      * @param File $file
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setFile(File $file) {
         $this->_file = $file;
@@ -262,7 +235,6 @@ abstract class BaseImage extends Object
 
     /**
      * Width
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getWidth() {
@@ -272,7 +244,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $width
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setWidth($width) {
         $this->_width = $width < 0 ? 0 : ($width > 4096 ? 4096 : $width);
@@ -280,7 +251,6 @@ abstract class BaseImage extends Object
 
     /**
      * Height
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getHeight() {
@@ -290,7 +260,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $height
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setHeight($height) {
         $this->_height = $height < 0 ? 0 : ($height > 4096 ? 4096 : $height);
@@ -298,7 +267,6 @@ abstract class BaseImage extends Object
 
     /**
      * Proportion
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getProportion() {
@@ -308,7 +276,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $proportion
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setProportion($proportion) {
         $this->_proportion = $proportion < 0 ? 0 : ($proportion > 1000 ? 1000 : $proportion);
@@ -316,7 +283,6 @@ abstract class BaseImage extends Object
 
     /**
      * Rotate
-     * @author Choate <choate.yao@gmail.com>
      * @return int
      */
     public function getRotate() {
@@ -326,7 +292,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $rotate
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setRotate($rotate) {
         $this->_rotate = $rotate < 0 ? 0 : ($rotate > 360 ? 360 : $rotate);
@@ -334,7 +299,6 @@ abstract class BaseImage extends Object
 
     /**
      * Operation
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getOperation() {
@@ -344,7 +308,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $operation
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setOperation($operation) {
         $this->_operation = in_array($operation, [0, 1, 2]) ? $operation : 0;
@@ -352,7 +315,6 @@ abstract class BaseImage extends Object
 
     /**
      * Prefer
-     * @author Choate <choate.yao@gmail.com>
      * @return int
      */
     public function getPrefer() {
@@ -362,7 +324,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $prefer
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setPrefer($prefer) {
         $this->_prefer = in_array($prefer, [0, 1, 2]) ? $prefer : 1;
@@ -370,7 +331,6 @@ abstract class BaseImage extends Object
 
     /**
      * Large
-     * @author Choate <choate.yao@gmail.com>
      * @return int
      */
     public function getLarge() {
@@ -380,7 +340,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $large
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setLarge($large) {
         $this->_large = in_array($large, [0, 1]) ? $large : 0;;
@@ -388,7 +347,6 @@ abstract class BaseImage extends Object
 
     /**
      * Sharpen
-     * @author Choate <choate.yao@gmail.com>
      * @return int
      */
     public function getSharpen() {
@@ -398,7 +356,6 @@ abstract class BaseImage extends Object
     /**
      * @param int $sharpen
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setSharpen($sharpen) {
         $this->_sharpen = $sharpen < 50 ? 50 : ($sharpen > 399 ? 399 : $sharpen);;
@@ -406,7 +363,6 @@ abstract class BaseImage extends Object
 
     /**
      * Blur
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getBlur() {
@@ -416,7 +372,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $blur
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setBlur($blur) {
         $this->_blur = $blur;
@@ -424,7 +379,6 @@ abstract class BaseImage extends Object
 
     /**
      * Quality
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getQuality() {
@@ -434,7 +388,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $quality
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setQuality($quality) {
         $this->_quality = $quality;
@@ -442,7 +395,6 @@ abstract class BaseImage extends Object
 
     /**
      * AbsoluteQuality
-     * @author Choate <choate.yao@gmail.com>
      * @return boolean
      */
     public function isAbsoluteQuality() {
@@ -452,7 +404,6 @@ abstract class BaseImage extends Object
     /**
      * @param boolean $absoluteQuality
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setAbsoluteQuality($absoluteQuality) {
         $this->_absoluteQuality = $absoluteQuality;
@@ -460,7 +411,6 @@ abstract class BaseImage extends Object
 
     /**
      * Format
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getFormat() {
@@ -470,7 +420,6 @@ abstract class BaseImage extends Object
     /**
      * @param mixed $format
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setFormat($format) {
         $this->_format = $format;
@@ -479,7 +428,6 @@ abstract class BaseImage extends Object
 
     /**
      * Storage
-     * @author Choate <choate.yao@gmail.com>
      * @return BaseStorage
      */
     public function getStorage() {
@@ -489,7 +437,6 @@ abstract class BaseImage extends Object
     /**
      * @param BaseStorage $storage
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setStorage($storage) {
         $this->_storage = \Yii::createObject($storage);
@@ -502,13 +449,17 @@ abstract class BaseImage extends Object
         return $result;
     }
 
+    public function setStorageBaseDir($_baseDir) {
+
+        $this->getStorage()->setBaseDir($_baseDir);
+    }
+
     public function setTempPath($tempPath) {
 
     }
 
     /**
      * Driver
-     * @author Choate <choate.yao@gmail.com>
      * @return string
      */
     public function getDriver() {
@@ -518,7 +469,6 @@ abstract class BaseImage extends Object
     /**
      * @param string $driver
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setDriver($driver) {
         $this->_driver = $driver;
@@ -528,7 +478,6 @@ abstract class BaseImage extends Object
     
     /**
      * 保存新尺寸的图片
-     * @author Hollis_Ho
      */
     abstract public function saveImg();
 }

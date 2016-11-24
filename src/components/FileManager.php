@@ -1,10 +1,4 @@
 <?php
-/**
- * 邢帅教育
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader\components;
 
 use yii\base\Object;
@@ -13,8 +7,7 @@ use yii\web\UploadedFile;
 
 /**
  * Class FileManager
- * @package sjy\upload\components
- * @author Choate <choate.yao@gmail.com>
+ * @package suncky\yii\widgets\webuploader\components
  */
 class FileManager extends Object
 {
@@ -25,7 +18,6 @@ class FileManager extends Object
 
     /**
      * @var BaseStorage
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_storage;
 
@@ -34,7 +26,6 @@ class FileManager extends Object
      *
      * @deprecated 请使用 [[self::setBasePath]]
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setUploadBasePath($_basePath) {
         $this->getStorage()->setBasePath($_basePath);
@@ -52,7 +43,6 @@ class FileManager extends Object
      * @param array $storage
      *
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @throws \yii\base\InvalidConfigException
      */
     public function setStorage(array $storage) {
@@ -61,7 +51,6 @@ class FileManager extends Object
 
     /**
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return BaseStorage
      */
     public function getStorage() {
@@ -74,7 +63,6 @@ class FileManager extends Object
 
     /**
      * EnableChunk
-     * @author Choate <choate.yao@gmail.com>
      * @return boolean
      */
     public function isEnableChunk() {
@@ -84,7 +72,6 @@ class FileManager extends Object
     /**
      * @param boolean $enableChunk
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setEnableChunk($enableChunk) {
         $this->_enableChunk = $enableChunk;
@@ -92,7 +79,6 @@ class FileManager extends Object
 
     /**
      * TotalChunk
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getTotalChunk() {
@@ -102,7 +88,6 @@ class FileManager extends Object
     /**
      * @param mixed $totalChunk
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setTotalChunk($totalChunk) {
         $this->_totalChunk = $totalChunk;
@@ -110,7 +95,6 @@ class FileManager extends Object
 
     /**
      * CurrentChunk
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getCurrentChunk() {
@@ -120,7 +104,6 @@ class FileManager extends Object
     /**
      * @param mixed $currentChunk
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setCurrentChunk($currentChunk) {
         $this->_currentChunk = $currentChunk;
@@ -150,7 +133,6 @@ class FileManager extends Object
      *
      * @deprecated
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return string
      */
     public function getFileType($typeId) {

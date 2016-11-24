@@ -1,12 +1,4 @@
 <?php
-/**
- * 邢帅教育
- *
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- *
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader;
 
 use yii\web\AssetBundle;
@@ -15,7 +7,7 @@ use Yii;
 class AttachmentUploaderAsset extends AssetBundle
 {
 
-    public $sourcePath = '@vendor/suncky\yii-webuploader/src/assets';
+    public $sourcePath = '@vendor/suncky/yii-webuploader/src/assets';
     public $js = [
         'json2.js',
         'webuploader.js',

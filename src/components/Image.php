@@ -1,25 +1,17 @@
 <?php
-/**
- * 邢帅教育
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader\components;
 
 use Yii;
 use Intervention\Image\ImageManager;
 /**
  * Class Image
- * @package suncky\uploader\components;
- * @author Choate <choate.yao@gmail.com>
+ * @package suncky\yii\widgets\webuploader\components;
  */
 class Image extends BaseImage
 {
     /**
      * @var \Intervention\Image\Image
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     private $_imageManager;
 
@@ -39,7 +31,6 @@ class Image extends BaseImage
     }
     
     /**
-     * @author Hollis_Ho
      * @see \suncky\uploader\components\BaseImage::saveImg()
      */
     public function saveImg() {
@@ -84,7 +75,6 @@ class Image extends BaseImage
     }
     
     /**
-     * @author Hollis_Ho
      * @see \suncky\uploader\components\BaseImage::setImgUrl()
      */
     public function setImgUrl($img_url) {
@@ -94,7 +84,6 @@ class Image extends BaseImage
 
     /**
      * ImageManager
-     * @author Choate <choate.yao@gmail.com>
      * @return \Intervention\Image\Image
      */
     public function getImageManager() {
@@ -104,7 +93,6 @@ class Image extends BaseImage
     /**
      * 是否缩放宽度
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return bool
      */
     protected function isScalingByWidth() {
@@ -117,7 +105,6 @@ class Image extends BaseImage
      * 是否缩放高度
      *
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return bool
      */
     protected function isScalingByHeight() {

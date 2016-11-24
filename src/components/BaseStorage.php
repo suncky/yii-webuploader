@@ -1,10 +1,4 @@
 <?php
-/**
- * 邢帅教育
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader\components;
 
 use yii\base\Object;
@@ -13,8 +7,7 @@ use yii\web\UploadedFile;
 
 /**
  * Class BaseStorage
- * @package sjy\upload\components
- * @author Choate <choate.yao@gmail.com>
+ * @package suncky\yii\widgets\webuploader\components
  */
 abstract class BaseStorage extends Object
 {
@@ -34,7 +27,6 @@ abstract class BaseStorage extends Object
      * @param string $fileHash
      *
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return File|null
      */
     abstract public function getFile($fileHash);
@@ -84,7 +76,6 @@ abstract class BaseStorage extends Object
      * @param bool $isCreate
      *
      * @since 1.0
-     * @author Choate <choate.yao@gmail.com>
      * @return string
      */
     public function buildFilePath($fileHash, $isCreate = false) {
@@ -132,7 +123,6 @@ abstract class BaseStorage extends Object
 
     /**
      * BaseUrl
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getBaseUrl() {
@@ -142,7 +132,6 @@ abstract class BaseStorage extends Object
     /**
      * @param mixed $baseUrl
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setBaseUrl($baseUrl) {
         $this->_baseUrl = $baseUrl;
@@ -150,7 +139,6 @@ abstract class BaseStorage extends Object
 
     /**
      * BasePath
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getBasePath() {
@@ -160,7 +148,6 @@ abstract class BaseStorage extends Object
     /**
      * @param mixed $basePath
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setBasePath($basePath) {
         $this->_basePath = $basePath;
@@ -168,7 +155,6 @@ abstract class BaseStorage extends Object
 
     /**
      * BaseDir
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getBaseDir() {
@@ -178,7 +164,6 @@ abstract class BaseStorage extends Object
     /**
      * @param mixed $baseDir
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setBaseDir($baseDir) {
         $this->_baseDir = $baseDir;

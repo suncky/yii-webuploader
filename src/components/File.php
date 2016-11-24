@@ -1,10 +1,4 @@
 <?php
-/**
- * 邢帅教育
- * 本源代码由邢帅教育及其作者共同所有，未经版权持有者的事先书面授权，
- * 不得使用、复制、修改、合并、发布、分发和/或销售本源代码的副本。
- * @copyright Copyright (c) 2013 suncky.com all rights reserved.
- */
 namespace suncky\yii\widgets\webuploader\components;
 
 use yii\helpers\ArrayHelper;
@@ -14,8 +8,7 @@ use yii\helpers\FileHelper;
 
 /**
  * Class File
- * @package sjy\upload\components
- * @author Choate <choate.yao@gmail.com>
+ * @package suncky\yii\widgets\webuploader\components
  */
 class File extends Object
 {
@@ -40,7 +33,6 @@ class File extends Object
 
     /**
      * Basename
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getBasename() {
@@ -49,7 +41,6 @@ class File extends Object
 
     /**
      * Name
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getName() {
@@ -58,7 +49,6 @@ class File extends Object
 
     /**
      * Mime
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getMime() {
@@ -67,7 +57,6 @@ class File extends Object
 
     /**
      * Size
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getSize() {
@@ -76,7 +65,6 @@ class File extends Object
 
     /**
      * Path
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getPath() {
@@ -85,7 +73,6 @@ class File extends Object
 
     /**
      * Pathname
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getPathname() {
@@ -95,7 +82,6 @@ class File extends Object
     /**
      * @param mixed $pathname
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setPathname($pathname) {
         $this->_pathname = $pathname;
@@ -103,7 +89,6 @@ class File extends Object
 
     /**
      * Extension
-     * @author Choate <choate.yao@gmail.com>
      * @return mixed
      */
     public function getExtension() {
@@ -113,7 +98,6 @@ class File extends Object
     /**
      * @param mixed $name
      *
-     * @author Choate <choate.yao@gmail.com>
      */
     public function setName($name) {
         $this->_name = $name;
